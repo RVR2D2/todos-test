@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+/* todo-column.css */
+
+.todo-column {
+	background-color: #f0f0f0;
+	border-radius: 4px;
+	padding: 16px;
+	margin: 16px;
+	max-width: 315px;
+	margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.column-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 16px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #50B810;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.task {
+	background-color: white;
+	border-radius: 4px;
+	padding: 12px;
+	margin-bottom: 12px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.task-list {
+	max-height: 590px; /* Выберите высоту, которая вмещает 4 карточки */
+	overflow-y: scroll;
 }
 
-.App-link {
-  color: #61dafb;
+.task-title {
+	font-size: 16px;
+	font-weight: bold;
+	margin-bottom: 8px;
+	max-height: 3em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: #3D8FEC;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task-description {
+	font-size: 14px;
+	margin-bottom: 8px;
+	max-height: 1em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.task-tags {
+	display: flex;
+	margin-bottom: 8px;
+	margin-right: 85px;
+}
+
+.tag {
+	padding: 4px 8px;
+	margin-right: 8px;
+	border-radius: 4px;
+	font-size: 12px;
+}
+
+.tag.purple {
+	background-color: #8e44ad;
+	color: white;
+}
+
+.tag.gray {
+	background-color: #95a5a6;
+	color: white;
+}
+
+.task-dates {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 8px;
+	font-size: 12px;
+	color: #50B810;
+}
+
+.user-avatar img {
+	max-width: 32px;
+	border-radius: 50%;
+}
+
+.task-block {
+	display: flex;
 }
